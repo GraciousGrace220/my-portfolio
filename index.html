@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Designer | Web Developer</title>
+
+    <meta
+        name="description"
+        content="Web Developer & Designer building modern websites and web apps for businesses."
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.6;
+            color: #17221b;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e8eee9;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #087a3e;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #405047;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #087a3e;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 110px 0 90px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #f3faf5 0%,
+                    #ffffff 100%
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 18px;
+            padding: 8px 14px;
+
+            background: #e5f5eb;
+            color: #087a3e;
+
+            border-radius: 30px;
+
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 7vw, 5.3rem);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            display: block;
+            color: #087a3e;
+        }
+
+        .hero-text {
+            max-width: 720px;
+
+            color: #5b6860;
+            font-size: 1.15rem;
+
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 14px 22px;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #087a3e;
+            color: white;
+
+            box-shadow:
+                0 10px 25px rgba(8, 122, 62, 0.18);
+        }
+
+        .btn-secondary {
+            border: 1px solid #d6e2da;
+            color: #087a3e;
+            background: white;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading small {
+            display: block;
+
+            color: #087a3e;
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #65736b;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #59665f;
+            margin-bottom: 18px;
+        }
+
+        .about-highlight {
+            padding: 30px;
+
+            background: #f2f8f4;
+            border: 1px solid #dcebe1;
+
+            border-radius: 18px;
+        }
+
+        .about-highlight h3 {
+            margin-bottom: 12px;
+            color: #087a3e;
+        }
+
+        .about-highlight p {
+            color: #536159;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f8fbf9;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            border: 1px solid #e1eae4;
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(20, 50, 30, 0.08);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #e8f6ed;
+
+            border-radius: 12px;
+
+            font-size: 1.4rem;
+
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #68756d;
+            font-size: 0.95rem;
+        }
+
+        /* =========================
+           WORK
+        ========================= */
+
+        .work {
+            background: white;
+        }
+
+        .project {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            gap: 40px;
+
+            align-items: center;
+
+            padding: 35px;
+
+            background: #f5faf7;
+
+            border: 1px solid #dfeae3;
+
+            border-radius: 24px;
+        }
+
+        .project-preview {
+            min-height: 330px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #087a3e,
+                    #055c2e
+                );
+
+            color: white;
+
+            box-shadow:
+                0 20px 45px rgba(8, 122, 62, 0.2);
+        }
+
+        .project-logo {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .project-preview p {
+            opacity: 0.9;
+        }
+
+        .project-info h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .project-info p {
+            color: #5d6962;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            padding: 7px 11px;
+
+            background: #e7f3eb;
+            color: #087a3e;
+
+            border-radius: 20px;
+
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            background: #f8fbf9;
+        }
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .process-item {
+            padding: 25px;
+
+            background: white;
+
+            border: 1px solid #e2eae5;
+
+            border-radius: 16px;
+        }
+
+        .process-number {
+            color: #087a3e;
+
+            font-size: 0.85rem;
+
+            font-weight: 900;
+
+            margin-bottom: 10px;
+        }
+
+        .process-item h3 {
+            margin-bottom: 8px;
+        }
+
+        .process-item p {
+            color: #68736d;
+            font-size: 0.92rem;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 90px 0;
+        }
+
+        .cta-box {
+            padding: 60px 30px;
+
+            text-align: center;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087a3e,
+                    #055c2e
+                );
+
+            color: white;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 5vw, 3.3rem);
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+
+            opacity: 0.92;
+        }
+
+        .cta-box .btn {
+            background: white;
+            color: #087a3e;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #647068;
+        }
+
+        .email {
+            display: inline-block;
+
+            color: #087a3e;
+
+            font-weight: 800;
+
+            font-size: 1.15rem;
+
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 0;
+
+            background: #102018;
+
+            color: #b9c6be;
+
+            text-align: center;
+
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .project {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .nav {
+                min-height: 65px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0 65px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .cards,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                padding: 20px;
+            }
+
+            .project-preview {
+                min-height: 250px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container nav">
+
+            <a
+                href="#top"
+                class="brand"
+            >
+                Designer
+            </a>
+
+            <nav>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#work">
+                    Work
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main id="top">
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        Web Developer & Designer
+                    </span>
+
+                    <h1>
+
+                        I build websites
+
+                        <span>
+                            and web apps for businesses.
+                        </span>
+
+                    </h1>
+
+                    <p class="hero-text">
+
+                        I create clean, mobile-friendly websites
+                        and web apps that help businesses present
+                        their services online and make it easier
+                        for customers to find, contact and work
+                        with them.
+
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="#contact"
+                            class="btn btn-primary"
+                        >
+                            Start a Project
+                        </a>
+
+                        <a
+                            href="#work"
+                            class="btn btn-secondary"
+                        >
+                            See My Work
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <small>
+                        ABOUT ME
+                    </small>
+
+                    <h2>
+                        I build real projects,
+                        not just practice pages.
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+
+                            I'm a growing Web Developer &
+                            Designer focused on creating
+                            useful, modern and easy-to-use
+                            websites.
+
+                        </p>
+
+                        <p>
+
+                            I learn by building real projects
+                            and solving real problems with
+                            HTML, CSS, JavaScript and
+                            modern web technologies.
+
+                        </p>
+
+                        <p>
+
+                            My goal is simple: help businesses
+                            get online with a website that
+                            actually represents what they do.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-highlight">
+
+                        <h3>
+                            What I can build
+                        </h3>
+
+                        <p>
+
+                            Business websites, service websites,
+                            marketplaces, directories,
+                            dashboards, forms and interactive
+                            web applications.
+
+                        </p>
+
+                        <br>
+
+                        <p>
+
+                            If you can describe the website
+                            you need, I can work with you to
+                            turn the idea into a working website.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section
+            class="services"
+            id="services"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <small>
+                        SERVICES
+                    </small>
+
+                    <h2>
+                        Websites and web apps
+                        built around your business.
+                    </h2>
+
+                    <p>
+
+                        I can create something simple for
+                        a small business or something more
+                        advanced with interactive features.
+
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🌐
+                        </div>
+
+                        <h3>
+                            Business Websites
+                        </h3>
+
+                        <p>
+
+                            Professional websites that show
+                            your business, services, contact
+                            information and what makes you
+                            different.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            📱
+                        </div>
+
+                        <h3>
+                            Mobile-Friendly Design
+                        </h3>
+
+                        <p>
+
+                            Websites designed to work properly
+                            on phones, tablets and desktop
+                            computers.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Web Apps
+                        </h3>
+
+                        <p>
+
+                            Interactive web applications with
+                            features such as accounts,
+                            dashboards, search, forms and
+                            online services.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🛠️
+                        </div>
+
+                        <h3>
+                            Website Fixes
+                        </h3>
+
+                        <p>
+
+                            I can help fix broken layouts,
+                            buttons, mobile issues and other
+                            website problems.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORK
+        ========================== -->
+
+        <section
+            class="work"
+            id="work"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <small>
+                        FEATURED PROJECT
+                    </small>
+
+                    <h2>
+                        A website like this?
+                        Yes, I can build it.
+                    </h2>
+
+                    <p>
+
+                        LosOja is one of my real projects.
+                        It combines business discovery,
+                        search, accounts, property,
+                        transportation and online services
+                        into one platform.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+
+                    <div class="project-preview">
+
+                        <div class="project-logo">
+                            LosOja
+                        </div>
+
+                        <p>
+                            Find What You Need Across Nigeria
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <h3>
+                            LosOja
+                        </h3>
+
+                        <p>
+
+                            A Nigerian marketplace and
+                            discovery platform designed to
+                            help people find businesses,
+                            products, services and more.
+
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Supabase
+                            </span>
+
+                            <span class="tag">
+                                Web App
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://graciousgrace220.github.io/losoja/"
+                            target="_blank"
+                            rel="noopener"
+                            class="btn btn-primary"
+                        >
+                            View LosOja
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROCESS
+        ========================== -->
+
+        <section class="process">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <small>
+                        MY PROCESS
+                    </small>
+
+                    <h2>
+                        From idea to working website.
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Discuss
+                        </h3>
+
+                        <p>
+
+                            We talk about your business,
+                            your goals and what you want
+                            the website to do.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Plan
+                        </h3>
+
+                        <p>
+
+                            I organize the pages, features
+                            and structure before building.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Build
+                        </h3>
+
+                        <p>
+
+                            I turn the plan into a responsive
+                            website or web application.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Launch
+                        </h3>
+
+                        <p>
+
+                            After testing, your website is
+                            ready to be shared with customers.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <h2>
+                        Have a website idea?
+                    </h2>
+
+                    <p>
+
+                        Whether you need a simple business
+                        website or something more advanced
+                        like a web app, let's turn your idea
+                        into something people can actually use.
+
+                    </p>
+
+                    <a
+                        href="#contact"
+                        class="btn"
+                    >
+                        Let's Work Together
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            class="contact"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <small>
+                        CONTACT
+                    </small>
+
+                    <h2>
+                        Let's build your website.
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Tell me what your business does,
+                    what you want your website to do,
+                    and I can help you plan the next step.
+
+                </p>
+
+                <a
+                    class="email"
+                    href="mailto:iloritosin370@gmail.com"
+                >
+                    iloritosin370@gmail.com
+                </a>
+
+                <br>
+
+                <a
+                    href="mailto:iloritosin370@gmail.com?subject=Website%20Project"
+                    class="btn btn-primary"
+                >
+                    Contact Me
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Designer.
+            Built with HTML & CSS.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
